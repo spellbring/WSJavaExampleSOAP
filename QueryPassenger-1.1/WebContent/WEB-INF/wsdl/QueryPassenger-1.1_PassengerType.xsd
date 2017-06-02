@@ -1,0 +1,11 @@
+<xs:schema xmlns="http://entities.mecsoft.cl/v1_0" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://entities.mecsoft.cl/v1_0">
+  <xs:complexType name="PassengerType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="IdPassenger" type="xs:string"></xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"></xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="Phone" type="xs:string"></xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="Email" type="xs:string"></xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="Address" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

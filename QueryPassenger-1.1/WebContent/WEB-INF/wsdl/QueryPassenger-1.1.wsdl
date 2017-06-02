@@ -1,0 +1,37 @@
+<wsdl:definitions xmlns:ns="http://entities.mecsoft.cl/v1_0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.mecsoft.cl/ns/ws/v1_0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.mecsoft.cl/ns/ws/v1_0">
+  <wsdl:types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mecsoft.cl/ns/ws/v1_0" schemaLocation="QueryPassenger-1.1_QueryPassengerRQ-1.0.0.xsd"></xs:import>
+      <xs:import namespace="http://www.mecsoft.cl/ns/ws/v1_0" schemaLocation="QueryPassenger-1.1_QueryPassengerRS-1.0.0.xsd"></xs:import>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryPassengerInput">
+    <wsdl:part element="tns:QueryPassengerRQ" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryPassengerOutput">
+    <wsdl:part element="tns:QueryPassengerRS" name="body"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="QueryPassengerPortType">
+    <wsdl:operation name="queryPassenger">
+      <wsdl:input message="tns:QueryPassengerInput"></wsdl:input>
+      <wsdl:output message="tns:QueryPassengerOutput"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryPassengerSoapBinding" type="tns:QueryPassengerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="queryPassenger">
+      <soap:operation soapAction="tns:queryPassenger"></soap:operation>
+      <wsdl:input>
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryPassenger-1.1">
+    <wsdl:port binding="tns:QueryPassengerSoapBinding" name="QueryPassengerPortType">
+      <soap:address location=""></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

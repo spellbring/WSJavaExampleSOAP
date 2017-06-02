@@ -1,0 +1,13 @@
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org) --><xs:schema xmlns="http://www.mecsoft.cl/ns/ws/v1_0" xmlns:ns="http://entities.mecsoft.cl/v1_0" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mecsoft.cl/ns/ws/v1_0">
+  <xs:import namespace="http://entities.mecsoft.cl/v1_0" schemaLocation="QueryPassenger-1.1_PassengerType.xsd"></xs:import>
+  <xs:element name="QueryPassengerRS">
+    <xs:annotation>
+      <xs:documentation>Este es el root del documento</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Passenger" type="ns:PassengerType"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
